@@ -1,5 +1,5 @@
 from django.db import models
-import datetime as dt
+
 
 # Create your models here.
 
@@ -31,7 +31,7 @@ class Image(models.Model):
     image_description = models.CharField(max_length =30)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
-    pub_date = models.DateTimeField(auto_now_add=True)
+  
 
     def __str__(self):
         return self.image
