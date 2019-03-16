@@ -24,7 +24,7 @@ curl https://bootstrap.pypa.io/get-pip.py | python.
 pip install django.
 
 SetUp / Installation Requirements
-python3.6 Flask pip
+python3.6 django pip
 
 pyperclip
 
