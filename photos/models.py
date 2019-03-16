@@ -53,6 +53,16 @@ class Image(models.Model):
     def update_image(self):
         '''Method to update an image in the database'''
         self.update()
+    
+    @classmethod
+    def get_image_by_id(cls, id):
+        '''
+        Method that loops through the class and pick an anticipated id
+        Return:
+            selected_image : desired image
+        '''
+        selected_image = Images.objects.filter_by(id=id)
+        return selected_image
 
     
         
