@@ -10,7 +10,15 @@ class Location(models.Model):
         return self.location_name
 
     def save_location(self):
-        self.save()    
+        self.save() 
+
+    def delete_location(self):
+        '''Method to delete an image from the database'''
+        self.delete() 
+
+    def update_location(self):
+        '''Method to update an image in the database'''
+        self.update()  
 
 
 class Category(models.Model):
@@ -21,6 +29,12 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+    
+    def delete_category
+    
+    def update_category(self):
+        '''Method to update an image in the database'''
+        self.update()
 
 
 class Image(models.Model):
@@ -58,9 +72,9 @@ class Image(models.Model):
         return selected_image
 
     @classmethod
-    def search_by_category(cls,search_term):
+    def search_by_title(cls,search_term):
         photos = cls.objects.filter(title__icontains=search_term)
-        return news
+        return photos
 
 
     
