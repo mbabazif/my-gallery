@@ -82,10 +82,5 @@ class Image(models.Model):
         return photos
 
 
-    
-        
-    
-
-
     class Meta:
         ordering = ['image']
