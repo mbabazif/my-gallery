@@ -65,7 +65,7 @@ def search_results(request):
         searched_category = category.search_by_title(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-photos/search.html',{"message":message,"articles": searched_category})
+        return render(request, 'all-photos/search.html',{"message":message,"category": searched_category})
 
     else:
         message = "You haven't searched for any term"
