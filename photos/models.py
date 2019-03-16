@@ -22,13 +22,6 @@ class Category(models.Model):
     def save_category(self):
         self.save()
 
-    @classmethod
-    def search_by_title(cls,search_term):
-        photos = cls.objects.filter(title__icontains=search_term)
-        return news
-
-
-
 
 class Image(models.Model):
     image = models.CharField(max_length =30)
@@ -63,6 +56,12 @@ class Image(models.Model):
         '''
         selected_image = Images.objects.filter_by(id=id)
         return selected_image
+
+    @classmethod
+    def search_by_category(cls,search_term):
+        photos = cls.objects.filter(title__icontains=search_term)
+        return news
+
 
     
         
