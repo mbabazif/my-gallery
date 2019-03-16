@@ -42,8 +42,22 @@ class Image(models.Model):
     def __str__(self):
         return self.image
     
-    def save_editor(self):
+    def save_image(self):
+        '''Method to save an image in the database'''
         self.save()
+
+    def delete_image(self):
+        '''Method to delete an image from the database'''
+        self.delete()
+
+    def update_image(self):
+        '''Method to update an image in the database'''
+        self.update()
+
+    
+        
+    
+
 
     class Meta:
         ordering = ['image']
