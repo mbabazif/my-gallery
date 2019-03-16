@@ -28,9 +28,14 @@ class Category(models.Model):
         return self.category_name
 
     def save_category(self):
+        '''Method to save the category in the database'''
         self.save()
     
-    def delete_category
+    def delete_category(self):
+        '''
+        Method to delete the category in the database
+        '''
+        self.delete()
     
     def update_category(self):
         '''Method to update an image in the database'''
