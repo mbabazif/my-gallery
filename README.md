@@ -30,13 +30,14 @@ pyperclip
 
 In your terminal:
 
-$ git clone: https://github.com/mbabazif/pitches.git
+$ git clone: https://github.com/mbabazif/my-gallery.git
 
-You can view this application using this link: https://pitch2.herokuapp.com/
+You can view this application using this link: 
 
 To run the application, in your terminal:
 
-$ .\start.py
+$ python3.6 manage.py runserver
+
 
 Technologies Used:
 
