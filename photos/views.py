@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 
 from django.http  import HttpResponse,Http404
 import datetime as dt
+from . models import Location, Category, Image
 
 # Create your views here.
 def welcome(request):
@@ -62,10 +63,10 @@ def search_results(request):
 
     if 'category' in request.GET and request.GET["category"]:
         search_term = request.GET.get("category")
-        searched_category = category.search_by_title(search_term)
+        searched_categories = category.search_by_category(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-photos/search.html',{"message":message,"category": searched_category})
+        return render(request, 'all-photos/search.html',{"message":message,"images": searched_category})
 
     else:
         message = "You haven't searched for any term"
