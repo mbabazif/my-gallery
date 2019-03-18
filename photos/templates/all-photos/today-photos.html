@@ -1,5 +1,7 @@
 {%extends 'all-photos/base.html'%}
 
 {% block content %}
-{{block.super}}
+<div class="container">
+<img src="{{image.image.url}}" class="img-responsive" width="100%" height="100%" alt="">
+</div>
 {% endblock %}
