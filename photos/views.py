@@ -22,6 +22,8 @@ def single_photo(request, photo_id):
 
 def all_images(request):
     photo = Images.get_images()
+    for phot in photo:
+        print(phot.photo.url)
     return render(request, 'all_images.html', {"photo": photo})
 
 
