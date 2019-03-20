@@ -27,6 +27,15 @@
                   <button class="btn btn-outline-info" onclick="copyUrl('{{photo.id}}-url')">Copy link</button>
     
           </div>
+        <script type="text/javascript">
+            function copyUrl(element) {
+            var myVar = document.getElementById(element);
+            myVar.select();
+            document.execCommand('copy');
+            alert("Photo's link copied: " + myVar.value);  
+            }
+        </script>
+    
         
     </div>
        
