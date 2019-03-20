@@ -22,9 +22,14 @@
                
         </div>
         </a>
+        <div class="modal-footer">
+            <input class="form-control input-lg" type="text"  value="http://127.0.0.1:8000{{photo.photo.url}}" id="{{photo.id}}-url" >
+                  <button class="btn btn-outline-info" onclick="copyUrl('{{photo.id}}-url')">Copy link</button>
+    
+          </div>
+        
     </div>
-        <!-- </div>
-    </div> -->
+       
     {% endfor %}
 
 <!-- </section> -->
